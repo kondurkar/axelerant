@@ -1,0 +1,333 @@
+/* 1366 common css */
+html {
+    font-size: 10px;
+    font-family: 'Open Sans';
+}
+
+body {
+    line-height: 1.3;
+    font-size: $baseFont#{px};
+    letter-spacing: 1.1px;
+}
+
+
+.text_center{
+    text-align: center;
+}
+.posR{
+    position: relative;
+}
+
+.container{
+    @include content-padding;
+}
+
+@include col;
+
+.title{
+    font-size: px2vw(32);
+    font-weight: bold;
+}
+
+.sub_title{
+    font-size: px2vw(23);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.sub_title_sm{
+    font-size: px2vw(19);
+    font-weight: 600;
+}
+.para{
+    margin-top: px2vw(20);
+}
+.responsive_img{
+    max-width: 100%;
+    display: block;
+}
+
+.form_input{
+    background-color: #fff;
+    border: 1px solid rgba($color: #fff, $alpha: 0.2);
+    padding: px2vw(12) px2vw(8);
+    width: 100%;
+    border-radius: 3px;
+}
+
+.from_text_area{
+    height: px2vw(110);
+    resize: none;
+}
+
+.cta{
+    border: none;
+    background-color: $themecolor;
+    color: #fff;
+    text-transform: capitalize;
+    padding: px2vw(12.5) px2vw(40);
+    border-radius: px2vw(20);
+    display: block;
+    cursor: pointer;
+}
+
+//header
+.menu_icon{
+    display: none;
+}
+.header__container{
+    background-color: $color1;
+    color: rgba($color: #fff, $alpha: 0.8);
+    padding-top: px2vw(20);
+    padding-bottom: px2vw(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.logo{
+    display: block;
+}
+
+.logo_img{
+    max-width: 100%;
+    display: block;
+}
+
+.header_right{
+    display: flex;
+}
+
+.header__list{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    
+    transition: color 0.3s $elastic;
+    a:hover{
+        color: #fff;;
+    }
+}
+
+.header__list_item{
+    position: relative;
+}
+
+.header__list_item_link{
+    padding: 0 px2vw(22);
+    
+}
+.sub__nav{
+    display: none;
+    position: absolute;
+    background-color: $color1;
+    width: px2vw(140);
+    top: calc(100% + #{px2vw(22)});
+    left: 0;
+    border-top: px2vw(5) solid $themecolor;
+    padding: px2vw(13) px2vw(10);
+}
+.sub__nav__list_item {
+    &:not(:first-child){
+        padding-top: px2vw(30);
+    }
+}
+
+.get_in_touch_blk {
+    padding: px2vw(7) px2vw(18);
+    background-color: $themecolor;
+    border-radius: px2vw(17);
+    margin-left: px2vw(10);
+    display: flex;
+    align-items: center;
+    span{
+        padding-left: px2vw(7);
+    }
+    img{
+        display: block;
+        max-width: 100%;
+    }
+}
+
+
+//footer
+.footer_container{
+    background-color: $color1;
+    color: rgba($color: #fff, $alpha: 0.8);
+    padding-top: px2vw(35);
+    padding-bottom: px2vw(35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foo_follow_us{
+    display: flex;
+    align-items: center;
+}
+
+.follow_us_text {
+    margin-right: px2vw(6);
+}
+
+.foo_social_icon{
+    &:not(:first-child){
+        margin-left: px2vw(10);
+    }
+}
+.foo_social_icon{
+    display: inline-block;
+    &.foo_icon_white_bg {
+        background: $color2;
+        color: $color1;
+        padding: 0 3px;
+        border-radius: 2px;
+    }
+}
+
+
+//homepage
+.hm_banner{
+    background: url('../images/home/services/banner.jpg') center no-repeat /cover;
+    text-align: center;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hm_banner_content{
+    width: px2vw(593);
+    margin: 0 auto;
+}
+
+.banner_services{
+    margin-top: px2vw(44);
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_service_blk{
+    width: px2vw(183);
+    height: px2vw(183);
+    border: 1px solid rgba($color: #fff, $alpha: 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_service_name{
+    font-size: px2vw(14);
+    padding-top: px2vw(18);
+}
+
+
+// home about section
+.hm_about{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: px2vw(75);
+    padding-bottom: px2vw(75);
+}
+
+.hm_abt_blk{
+    width: 50%;
+}
+
+//testimonial
+.hm_testimonial{
+    background: #f7f7f7;
+    padding-top: px2vw(80);
+    padding-bottom: px2vw(80);
+}
+
+.testimonials_slider{
+    &.slick-slider {
+        margin:px2vw(40) px2vw(-19) 0;
+    }
+    .slick-slide {
+        padding: 0 px2vw(19);
+    }
+}
+
+.testimonials_slides{
+    width: px2vw(375);
+}
+
+.testimonials_content__blk{
+    padding: px2vw(60) px2vw(40) px2vw(40) px2vw(40);
+    background: #fff;
+    border-radius: px2vw(15);
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top: px2vw(30);
+        left: px2vw(40);
+        width: px2vw(25);
+        height: px2vw(21);
+        background: url('../images/home/inverted-comma.png') no-repeat center /cover;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: px2vw(40);
+        border-right: px2vw(12) solid transparent;
+        border-left: px2vw(25) solid transparent;
+        border-top: px2vw(20) solid #fff;
+    }
+}
+
+.testimonials_person_blk{
+    padding-top: px2vw(30);
+    display: flex;
+    align-items: center;
+}
+
+.testimonials_avatar{
+    width: px2vw(62);
+    margin-right: px2vw(12);
+}
+
+.testimonials_person_name{
+    font-size: px2vw(17);
+}
+
+.testimonials_person_designation{
+    font-size: px2vw(16);
+    color: rgba($color: #000, $alpha: 0.7);
+}
+
+
+//work with us
+.hm_work_with_us{
+    background: url('../images/home/work.jpg') no-repeat center /cover;
+    padding-top: px2vw(80);
+    padding-bottom: px2vw(80);
+    color: #fff;
+    .sub_title_sm{
+        margin-top: px2vw(15);
+    }
+}
+.work_with_us__from{
+    margin: px2vw(40) auto 0;
+    width: px2vw(800);
+}
+.work_with_us_form_row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: px2vw(20);
+}
+.form_input_group{
+    width: px2vw(255);
+}
+.work_with_us_cta{
+    margin: px2vw(20) auto 0;
+}
